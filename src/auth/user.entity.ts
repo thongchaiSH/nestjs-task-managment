@@ -1,3 +1,4 @@
+import { Exclude } from 'class-transformer';
 import { type } from 'os';
 import { Task } from 'src/tasks/task.entity';
 import {
@@ -21,9 +22,11 @@ export class User {
   password: string;
 
   @CreateDateColumn()
+  @Exclude()
   created_at: Date;
 
   @UpdateDateColumn()
+  @Exclude()
   updated_at: Date;
 
   @OneToMany((_type) => Task, (task) => task.user, { eager: true })
