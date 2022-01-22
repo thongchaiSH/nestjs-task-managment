@@ -1,6 +1,6 @@
 import { Exclude } from 'class-transformer';
 import { type } from 'os';
-import { Task } from 'src/tasks/task.entity';
+import { Task } from '../tasks/task.entity';
 import {
   Column,
   CreateDateColumn,
